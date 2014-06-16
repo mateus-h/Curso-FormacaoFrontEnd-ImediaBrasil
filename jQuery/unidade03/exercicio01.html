@@ -3,16 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Curso jQuery Essencial</title> 
-        
-        <script>
-			function inicial() {
-				alert("Página carregada com sucesso");	
-			}
-			window.onload = inicial;
-		</script>
     </head>
 
     <body>
-	  
+	  <p>DOM carregado com Sucesso.</p>
+
+
+
+      <!-- jQuery -->
+           <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+            <script>
+                $(function() {
+                    alert($('p').text());    
+                });
+            </script>
+       <!-- Jquey -->
     </body>
 </html>
