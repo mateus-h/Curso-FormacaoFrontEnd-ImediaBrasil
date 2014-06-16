@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Essencial</title>
+        
+        <script src="jquery-1.10.1.min.js"></script>
+        <script>
+			$( function(e) {
+				$('textarea').keypress(function(){$('body').append('keypress<br>');});
+				$('textarea').keydown(function(){$('body').append('keydown<br>');});	
+				$('textarea').keyup(function(){$('body').append('keyup<br>');})							
+			});
+
+	 	</script>           
+        
+        
+    </head>
+
+    <body>
+    	<form >        
+        	<textarea></textarea>
+        </form>
+    </body>
+</html>

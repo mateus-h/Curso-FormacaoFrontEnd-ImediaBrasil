@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Essencial</title>
+        
+        <style>
+        	div { display:block; margin:20px }
+        </style>
+        
+		
+        <script src="js/jquery.js"></script>
+        <script>
+			$( function() {
+				
+				var retornarProdutos;
+				function preencherLista() {
+					$.ajax({
+						url:"pesquisar_produtos.php",
+						cache:false,
+						async:true
+					})
+					.done(function(resposta) {
+						retornarProdutos = resposta;
+						var saida = '';
+						$.each($.parseJSON(resposta), function(i,valor) {
+							saida += '<option value="' + valor.produtoid + '">';
+							saida += valor.nomeproduto;
+							saida += '</option>'
+						})
+						$('#sanduiches').html(saida)
+					})
+					.fail( function() {
+						$('#janela').html('erro')
+					});					
+					
+				}
+				
+				preencherLista();
+				
+				
+				$('#categorias').change(function(e) {
+  					var cat = $('#categorias').val();
+					$('#sanduiches option').remove();
+					var saida='';
+					$.each($.parseJSON(retornarProdutos), function(i,valor) {
+						if ( cat == valor.categoriaid || cat == 0) {
+							saida += '<option value="' + valor.produtoid + '">';
+							saida += valor.nomeproduto;
+							saida += '</option>'
+						}
+					})
+					$('#sanduiches').html(saida)					
+					
+				});
+			});
+		</script>
+
+    </head>
+
+    <body>
+    	
+        <div id="resposta">
+        	<form action="pesquisar_produtos.cfm" method="get" id="refeicao">
+        		<label>Categorias<br>
+        			<select name="categoria" id="categorias">
+        			  <option value="0">Todas as categorias</option>
+                      <option value="1">Almocos</option>
+        			  <option value="2">Sanduiches</option>
+        			  <option value="3">Petiscos</option>
+        			</select>
+                </label>
+                <br><br>
+        		<label>Sanduiches<br>
+        			<select name="sanduiche" id="sanduiches">
+
+        			</select>
+                </label>                
+
+        	</form>
+        </div>
+        
+        <div id="janela">
+        
+        </div>
+    
+    </body>
+</html>

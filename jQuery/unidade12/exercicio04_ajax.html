@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Essencial</title>
+        
+        <style>
+        	div { display:block; margin:20px }
+        </style>
+        
+		
+        <script src="js/jquery.js"></script>
+        <script>
+			$( function() {
+				
+				$('#categorias').change(function(e) {
+  
+					e.preventDefault();
+					var formulario = $(this);
+										
+					$.ajax({
+						type:"get",
+						data:formulario.serialize(),
+						url:"pesquisar_produtos.php",
+						cache:false,
+						async:true
+					})
+					.done(function(resposta) {
+						console.log($.parseJSON(resposta))	
+						saida = '';
+						$.each($.parseJSON(resposta), function(i,valor) {
+	
+						})
+					
+						$('#sanduiches').html(saida)
+					})
+					.fail( function() {
+						$('#janela').html('erro')
+					});
+				});
+			});
+		</script>
+
+    </head>
+
+    <body>
+    	
+        <div id="resposta">
+        	<form action="pesquisar_produtos.cfm" method="get" id="refeicao">
+        		<label>Categorias<br>
+        			<select name="categoria" id="categorias">
+        			  <option value="1">Almocos</option>
+        			  <option value="2">Sanduiches</option>
+        			  <option value="3">Petiscos</option>
+        			</select>
+                </label>
+                <br><br>
+        		<label>Sanduiches<br>
+        			<select name="sanduiche" id="sanduiches">
+
+        			</select>
+                </label>                
+
+        	</form>
+        </div>
+        
+        <div id="janela">
+        
+        </div>
+    
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Essencial</title>
+
+		<style>
+			body {
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;	
+			}
+		
+			input[type='text'] {
+				border:1px solid #999;
+				padding:5px;	
+				margin-bottom:20px;
+				border-radius:3px;
+			}
+			
+			label, input[type='submit'] {
+				display:block;
+				margin-bottom:3px;
+			}
+			
+			input + span {
+				margin-left:15px;
+				border:1px solid #CCC;
+				background-color:#F0F0F0;
+				padding:5px 10px;	
+				color:#999;
+				border-radius:3px;
+			}
+		</style>
+        
+        <script src="jquery-1.10.1.min.js"></script>
+        <script>
+			$( function() {
+				
+				
+			});
+		</script>
+
+    </head>
+
+    <body>
+    
+    	<form action="" method="post" id="formulario">
+        	
+            <label for="nome">Nome Completo</label>
+        	<input type="text" name="nomecompleto" id="nomecompleto" class="dica"><span>Digite seu nome</span>
+
+            <label for="nome">Email </label>
+        	<input type="text" name="email" id="email" class="dica"><span>Digite um email válido</span>
+
+            <label for="nome">CPF </label>
+        	<input type="text" name="cpf" id="cpf" class="dica"><span>Digite apenas os números</span> 
+            
+            <input type="submit" value="Enviar">       
+        </form>
+    
+    </body>
+</html>
