@@ -14,7 +14,7 @@
 		<script src="jquery-1.10.1.min.js"></script>
         <script>
 			$( function(e) {
-				
+			     $("li[id^=texto][title^=Outro]").css('background-color', '#ff9');
             });
 		</script>
     </head>
@@ -23,8 +23,8 @@
     	<ul>
             <li class="vermelho">Curso HTML5 Essencial</li>
             <li class="verde">Curso CSS3 Essencial</li>
-            <li id="texto1">Curso Javascript Essencial</li>
-            <li id="texto2">Curso jQuery Essencial</li>             
+            <li id="texto1" title="Outro curso">Curso Javascript Essencial</li>
+            <li id="texto2" title="esse é seu curso">Curso jQuery Essencial</li>             
     	</ul>
     </body>
 </html>
