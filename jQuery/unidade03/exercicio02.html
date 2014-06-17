@@ -16,9 +16,14 @@
 		<!-- scripts -->
         <script src="jquery-1.10.1.min.js"></script>
         <script>    
-        	$( function() {
-				
-			})
+            $(function  () {
+                // alert("Essa página contem "+document.getElementsByTagName('a').length+" links.");
+
+                // alert("Essa página contem "+$('a').length+" links.");
+
+                $("a:contains('Brasil')").css('color', 'red');
+
+            })
         </script>   
                 
     </body>
