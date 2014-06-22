@@ -15,7 +15,12 @@
 		<script src="jquery-1.10.1.min.js"></script>
         <script>
 			$( function(e) {
-				
+				// $('form :input').before('*');
+				// $('form :text').before('*');
+				// $('form :checkbox').before('*');
+				// $('form :radio').before('*');
+				// $('form :input:disabled').before('*');
+				$('form :checked').before('*');
             });
 		</script>
     </head>
@@ -27,6 +32,9 @@
         
         	<label for="nome">Nome</label>
         	<input type="text" name="nome" id="nome" />
+
+        	<label for="cidade">Cidade</label>
+        	<input type="text" name="cidade" id="cidade" disabled />
             
             <label for="telefone">Telefone</label>
             <input type="tel" name="telefone" id="telefone"/>
@@ -46,7 +54,7 @@
             <label for="uva">Uva</label><br>
             
             <p>Forma de pagamento</p>
-            <input type="radio" value="dinheiro" name="dinheiro" id="dinheiro">
+            <input type="radio" value="dinheiro" name="dinheiro" id="dinheiro" checked>
             <label for="dinheiro">Dinheiro</label><br>
             
             <input type="radio" value="cartao" name="cartao" id="cartao">
