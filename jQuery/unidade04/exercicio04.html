@@ -7,8 +7,13 @@
         <script src="jquery-1.10.1.min.js"></script>
         <script>
 			$(function(e) {
-				
-			})
+				// $('ul').remove();
+				// $('li:last').remove();
+				// $('li.este').remove();
+				// $('li:last-child').replaceWith('<li>Curso jQuery</li>');
+				// $('ul').wrapAll('<div style="border:solid 1px; boder-color:#ccc;" class="extra-wrapper"></div>');
+				$('ul').wrapInner('<div style="border:solid 1px; boder-color:#ccc;" class="extra-wrapper"></div>');	
+		});
 		</script>        
     </head>
 
@@ -18,8 +23,8 @@
 		<ul>
         		
             <li>Curso HTML5 Essencial</li>
-            <li>Curso CSS3 Essencial</li>
-            <li>Curso Javascript Essencial</li>
+            <li class="este">Curso CSS3 Essencial</li>
+            <li class="este">Curso Javascript Essencial</li>
             <li>Curso jQuery Essencial</li>
         </ul>
         
