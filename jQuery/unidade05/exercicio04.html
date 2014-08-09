@@ -24,7 +24,9 @@
 			}
 			
 			nav li:first-child 	{ background-image:url(imagem/futebol.png) } 
-			nav li:nth-child(2) { background-image:url(imagem/basquete.png) } 
+			nav li:nth-child(2) { background-image:url(imagem/basquete.png) }
+			#primeira{width: 300px; height: 500px; background: #066;}
+			#segunda{width: 300px; height: 500px; background: #933;}
 			
 					
         </style>
@@ -32,8 +34,9 @@
         <script src="jquery-1.10.1.min.js"></script>
         <script>		
 			$( function(e) { 	
-
-
+				$("nav li:nth-child(2)").click(function(){
+					$("html, body").animate({scrollTop:300},1000);
+				});
 			});			
 		</script>   
     </head>
@@ -45,5 +48,11 @@
             </ul>
         </nav>
         
+        <div id="primeira">
+        	
+        </div>
+        <div id="segunda">
+        	
+        </div>	
     </body>
 </html>
