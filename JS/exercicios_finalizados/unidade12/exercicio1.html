@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" />
+<title>Formulario</title>
+<style type="text/css">
+
+body {
+	background-color: #EEEEEE;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#principal {
+	width:900px;
+	margin:0 auto;
+	background-color:#FFFFFF;
+	border-right:1px solid #999;
+	border-left:1px solid #999;
+	border-bottom:1px solid #999;
+	margin-bottom:30px;
+}
+
+#janela {
+	width:870px;
+	padding:15px;	
+}
+
+#mensagem {
+	width:500px;
+	margin-left:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#F00;	
+}
+
+h1 {
+	color:#666666;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+}
+
+label {
+	display:block;
+}
+
+.caixaTexto {
+	padding:5px;
+	border:1px solid #999;
+	width:200px;
+	background-color:#FFFFFF;
+	margin-bottom:20px;
+}
+
+.botaoSubmit {
+	display:block;	
+}
+
+</style>
+</head>
+
+<body>
+
+	<div id="principal">
+    	<img src="imagem_topo.jpg" width="900" height="366" />
+        
+        <div id="janela">
+            <h1>Inscreva-se abaixo</h1>
+    
+            <form id="formViagem" name="formViagem" method="post" action="destino.html">
+
+				<label for="nome">Nome do Passageiro</label>
+    			<input type="text" id="nome" name="nome" class="caixaTexto"  />
+                
+				<label for="telefone">Telefone</label>
+    			<input type="text" id="telefone" name="telefone" class="caixaTexto" />
+                
+				<label for="email">Email</label>
+    			<input type="text" id="email" name="email"  class="caixaTexto" />     
+                
+                <div id="mensagem"></div>                          
+    			
+                <input type="submit" value="Enviar" class="botaoSubmit" />
+    
+            </form>
+            
+        </div>
+
+    </div>
+ 
+ 	<script src="script1.js" type="text/javascript"></script>    
+</body>
+</html>

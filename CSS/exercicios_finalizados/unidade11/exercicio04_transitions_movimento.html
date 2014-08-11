@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="ISO-8859-2">
+<title>Curso de CSS - Transform-origin</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style type="text/css">
+html {
+	background:rgb(229,229,229);
+}
+
+article, aside, section, header, footer, nav {
+	display:block;
+}
+
+body {
+	position:relative;
+	width:760px;
+	height:500px;
+	margin:10px auto;
+	box-shadow:0 0 10px #999999;
+	background-color:rgb(255,255,255);
+	text-align:center;
+}
+
+body:after {
+	clear:both;
+}
+
+header {
+	width:760px;
+	height:110px;
+	background-image:url(../unidade09/imagens/topo.jpg);
+	background-repeat:no-repeat;
+	margin-bottom:40px;
+}
+
+#janela1, #janela2 {
+	position:absolute;
+	width:150px;height:150px;
+	top:130px;
+}
+
+#janela1 {
+	left:10px;
+	background-color:rgb(0,102,204);
+	cursor:pointer;
+}
+
+#janela2 {
+	left:180px;
+	background-color:rgb(255,0,0);
+}
+#janela1:hover + #janela2{
+	left: 580px;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-ms-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+}
+#janela1:hover{
+	width: 560px;
+	-webkit-transition: all .5s ease-out;
+	   -moz-transition: all .5s ease-out;
+	    -ms-transition: all .5s ease-out;
+	     -o-transition: all .5s ease-out;
+	        transition: all .5s ease-out;
+}
+
+</style>
+
+
+<body>
+
+	<header></header>
+    
+    <div id="janela1"></div>
+    <div id="janela2"></div>
+    
+
+</body>
+</html>

@@ -26,8 +26,8 @@
 			nav li:first-child 	{ background-image:url(imagem/futebol.png) } 
 			nav li:nth-child(2) { background-image:url(imagem/basquete.png) } 
 			
-			#primeira			{ width:300px; height:500px; background-color:#066 }
-			#segunda			{ width:300px; height:500px; background-color:#933 }
+			#primeira			{ width:300px; height:800px; background-color:#066 }
+			#segunda			{ width:300px; height:800px; background-color:#933 }
 					
         </style>
          
@@ -35,7 +35,9 @@
         <script>		
 			$( function(e) { 	
 				$('nav li:nth-child(2)').click(function(e) {
+					console.log("o topo do elemento segunda é :"+$("#segunda").offset().top);
                     $('html, body').animate( { scrollTop: 300 } , 1000 );
+
                 });
 			});			
 		</script>   

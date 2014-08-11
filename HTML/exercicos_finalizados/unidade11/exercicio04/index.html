@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR" >
+<head>
+    <meta charset="ISO-8859-2">
+    <title>Exercicio de videos</title>
+	<script src="includes/videosub.js"></script>
+	<style>
+        body {
+            background-color:#D4D4D4;
+        }
+    
+		#video {
+			width:480px;
+			height:272px;
+            margin:100px auto 0;
+            box-shadow:0 0 8px #666;	
+		}
+		
+		footer {
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:12px;
+			color:#666;
+			width:480px;
+			margin:30px auto;
+			background-color:#bababa;	
+			padding:20px 0;
+			text-align:center;
+		}
+    </style>
+
+	
+
+    </head>
+
+<body>
+    	<section id="video">
+            <video controls width="480" height="272">
+                <source src="vaca.mp4" type="video/mp4" >
+                <source src="vaca.ogv"	type="video/ogg" >
+                <track src="vaca.srt" kind="subtitle" srclang="pt-BR" label="Português"></track>
+            </video>
+    	</section>
+
+    </body>
+</html>

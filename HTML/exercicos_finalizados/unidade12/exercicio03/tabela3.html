@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+    <head>
+            <meta charset="ISO-8859-2">
+            <title>Curso HTML5 Essencial</title>
+    </head>
+    
+    <style>
+		body {
+			font-family:Arial, Helvetica, sans-serif;
+		}
+	
+		table { 
+			width:700px;
+			margin:0 auto;
+			border-spacing:0;
+			border-right:1px solid #ccc;
+			border-bottom:1px solid #ccc;
+		}
+		
+		caption {
+			font-size:130%;
+			font-weight:bold;
+			padding:5px 0;
+			background-color:#DDD;
+			border:1px solid #ccc;
+			border-bottom:none;
+		}
+		
+		tr, td, th {
+			border:thin solid #ccc;
+			border-bottom:none;
+			border-right:none;
+			padding:5px;
+		}
+		
+		td { 
+			text-align:center;
+		}
+		
+		th {
+			text-align:left;
+		}
+		
+		thead th {
+			text-align:center;
+		}
+		
+		thead tr {
+			background-color:#E6E6E6;
+		}
+
+		thead tr th:first-child {
+			text-align:left;
+		}
+		
+		tfoot td {
+			font-size:.9em;
+			color:#666;
+		}
+	
+		tbody tr:nth-child(even) {
+			background-color:#F3F3F3;	
+		}
+
+        .coluna1{
+            background: #C0C0C0;
+        }
+
+        .coluna2{
+            background: #00AE57;
+        }
+
+        .coluna3{
+            background: #3F317D;
+        }
+
+        .coluna4{
+            background: #160F9F;
+        }
+
+        .coluna5{
+            background: #238B5F;
+        }
+	
+	</style>
+
+    <body>
+		
+        <table>
+        	
+            <caption>Copa do Mundo Fifa 2014 - Grupo A</caption>
+            
+            <colgroup>
+            	<col class="coluna1">
+                <col class="coluna2">
+                <col class="coluna3">
+                <col class="coluna4">
+                <col class="coluna5">
+            </colgroup>
+            
+            <thead>
+            	  <tr>
+                	<td></td>
+                	<td>Pontos</td>
+                    <td>Vitória</td>
+                    <td>Empate</td>
+                    <td>Derrotas</td>
+                </tr> 
+            </thead>
+            
+            <tfoot>
+                 <tr>
+                	<td></td>
+                	<td>Pontos</td>
+                    <td>Vitória</td>
+                    <td>Empate</td>
+                    <td>Derrotas</td>
+                </tr> 
+            </tfoot>
+            
+            <tbody>
+                <tr>
+                	<th width="200">Brasil</th>
+                	<td>9</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>     
+                
+            	<tr>
+                	<th>Holanda</th>
+                	<td>6</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>       
+                
+            	<tr>
+                	<th>Chile</th>
+                	<td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>2</td>
+                </tr>       
+                
+            	<tr>
+                	<th>Jamaica</th>
+                	<td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>3</td>
+                </tr>
+              
+            </tbody>
+
+        
+        </table>
+
+    </body>
+</html>

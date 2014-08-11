@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="ISO-8859-2">
+<title>Curso de CSS - Layout c/ 2 colunas</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style type="text/css">
+html, body , h1 {
+	margin:0;
+	padding:0;
+}
+
+html {
+	background:rgb(254,255,216);
+}
+
+article, aside, section, header, footer, nav {
+	display:block;
+}
+
+body {
+	width:660px;
+	background-color:rgb(255,255,255);
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	box-shadow: 0 0 10px #666;
+	margin:10px auto;
+	padding:10px;
+}
+
+#principal {
+	background-color:rgb(240,240,240);
+	border:1px dotted #666666;
+	margin-top:20px;
+}
+
+section {
+	height:100px;width:100px;padding:10px;
+}
+
+.janela1 {
+	background-color:rgb(153,204,51);
+}
+
+.janela2 {
+	background-color:rgb(255,204,51);
+}
+
+.janela3 {
+	background-color:rgb(51,153,204);
+}
+
+</style>
+
+
+</head>
+
+<body>
+	
+<h1>Exerc&iacute;cio de Posicionamento</h1>
+    
+    <p>The CSS specification offers us five&nbsp;positionproperties:&nbsp;<strong>static,&nbsp;relative,&nbsp;absolute,&nbsp;fixed, and inherit</strong>.    </p>
+    <p>Each property serves a specific purpose. Understanding that purpose is the key to mastering CSS-based layouts.</p>
+    
+    <div id="principal">
+      <section class="janela1">Verde</section>
+      <section class="janela2">Amarelo</section>
+      <section class="janela3">Azul</section>
+</div>
+    
+</body>
+</html>

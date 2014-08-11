@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="ISO-8859-2">
+        <title>Curso HTML5 Essencial</title>
+        
+        <link href="css/estilo.css" rel="stylesheet" media="screen">
+    </head>
+
+    <body>
+        
+        <h2>Formulário</h2>
+        
+        <form action="destino.html" method="post">
+		
+        	<label for="nome_loja">Pesquise por loja</label>
+        	<input type="text" name="nome_loja" id="nome_loja" size="40" list="lojas" >
+            <datalist id="lojas">
+                <option value="casasbahia">Casas bahia</option>
+                    <option value="americanas">Americanas</option>
+                    <option value="pernambucanas">Pernambucanas</option>
+                    <option value="king">King</option>    
+            </datalist>
+                        
+            <input type="submit" value="Enviar" id="enviar" name="enviar">                
+            
+        </form>
+    
+    </body>
+</html>

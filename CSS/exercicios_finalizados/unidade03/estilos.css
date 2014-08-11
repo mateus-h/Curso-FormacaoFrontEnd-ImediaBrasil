@@ -1,0 +1,19 @@
+@charset "ISO-8859-2";
+/* CSS Document */
+
+h1 {
+	
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	color:#0000A0;
+	letter-spacing: -0.1em;
+	font-size: 40px;
+}
+
+p {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	line-height: 150%;
+}
+	

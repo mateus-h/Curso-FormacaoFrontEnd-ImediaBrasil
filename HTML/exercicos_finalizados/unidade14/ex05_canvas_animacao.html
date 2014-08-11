@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso HTML5 Essencial</title>
+        
+        <script src="cake.js"></script>     
+        <script>
+			function desenhar () {
+			  var cakeCanvas = new Canvas(document.body, 600,400);
+			  
+			  var meuCirculo = new Circle(100,{
+			  	id: 'meuCirculo',
+			  	x: cakeCanvas.width/2,
+			  	y: cakeCanvas.height/2,
+			  	stroke: 'red',
+			  	fill:'#050505',
+			  	strokeWidth: 20,
+			  	endAngle: Math.PI*2
+			  });
+			  meuCirculo.addFrameListener(
+			  	function (t, dt) {
+					this.scale = Math.sin(t/1000);
+				  }
+			  );
+			  cakeCanvas.append(meuCirculo);
+			}
+			
+			window.onload = desenhar;
+		</script>
+    
+        
+    </head>
+    
+    <body>
+	</body>
+    
+</html>

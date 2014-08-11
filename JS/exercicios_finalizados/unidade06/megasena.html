@@ -1,0 +1,25 @@
+!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>megasena</title>
+	<script>
+	var sorteio;
+	var megaSena = new Array();
+
+	var i = 0;
+	while (i < 6 ){
+		sorteio = Math.round(Math.random() * 59 ) +1;
+		if(megaSena.indexOf(sorteio) < 0){
+		  megaSena.push(sorteio);
+		  i++; 
+		}
+	}
+	megaSena;
+	
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

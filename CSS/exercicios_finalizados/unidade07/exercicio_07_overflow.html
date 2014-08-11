@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="ISO-8859-2">
+<title>Curso de CSS - Layout c/ 2 colunas</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style type="text/css">
+html, body , h1 {
+	margin:0;
+	padding:0;
+}
+
+article, aside, section, header, footer, nav {
+	display:block;
+}
+
+body {
+	background:rgb(254,255,216);
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+
+#principal {
+	background-color:rgb(255,255,255);
+	width:660px;
+	box-shadow: 0 0 10px #666;
+	margin:10px auto;
+	padding:10px;
+}
+
+#conteudo {
+	background-color:rgb(240,240,240);
+	border:1px dotted #666666;
+	margin-top:20px;
+	position:relative;
+	height:450px;
+}
+
+section {
+	width:200px;
+}
+
+.janela1 {
+	background-color:rgb(153,204,51);
+	padding:10px;
+	position:absolute;
+	top:50px;
+	left:50px;
+	overflow: auto;
+	height: 200px;
+}
+
+</style>
+
+
+</head>
+
+<body>
+	    
+    <div id="principal">
+
+        <h1>Exerc&iacute;cio de Overflow       </h1>
+        <p>O uso da propriedade&nbsp;overflow&nbsp;com valor diferente de&nbsp;visible, que &eacute; seu valor padr&atilde;o, criar&aacute; um novo&nbsp;<a href="https://developer.mozilla.org/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">contexto de formata&ccedil;&atilde;o de bloco</a>. Isto &eacute; tecnicamente necess&aacute;rio para evitar que um conte&uacute;do flutuante que entre em contato com o objeto dentro da area de rolamento quebre as linhas do conte&uacute;do para ajustar a disposi&ccedil;&atilde;o do texto. A quebra das linhas teria que ocorrer toda vez que a barra de rolagem fosse utilizada, tornando este procedimento muito lento. Note que ao definir a propredade&nbsp;scrollTop&nbsp;para oelemento&nbsp;HTML relevante, ainda que o valor de&nbsp;overflow&nbsp;fosse&nbsp;hidden&nbsp;o conte&uacute;do poderia precisar ser movido.</p>
+
+    	<div id="conteudo">
+        
+            <section class="janela1">
+            	<p>A propriedade overflow especifica quando o conteúdo de um elemento de nível de bloco deve ser cortado, mostrado com barras de rolagem ou mostrados vazando fora do elemento.</p>
+            	<p>O uso da propriedade&nbsp;overflow&nbsp;com valor diferente de&nbsp;visible, que &eacute; seu valor padr&atilde;o, criar&aacute; um novo&nbsp;<a href="https://developer.mozilla.org/en-US/docs/CSS/block_formatting_context" title="CSS/block_formatting_context">contexto de formata&ccedil;&atilde;o de bloco</a>. Isto &eacute; tecnicamente necess&aacute;rio para evitar que um conte&uacute;do flutuante que entre em contato com o objeto dentro da area de rolamento quebre as linhas do conte&uacute;do para ajustar a disposi&ccedil;&atilde;o do texto. A quebra das linhas teria que ocorrer toda vez que a barra de rolagem fosse utilizada, tornando este procedimento muito lento. Note que ao definir a propredade&nbsp;scrollTop&nbsp;para oelemento&nbsp;HTML relevante, ainda que o valor de&nbsp;overflow&nbsp;fosse&nbsp;hidden&nbsp;o conte&uacute;do poderia precisar ser movido.</p>
+            </section>
+           
+            
+   	  </div>
+	</div>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Trabalhando com objeto</title>
+	<script type="text/javascript">
+	var produto1 = { nome:"Azeite", preco: 2.5, estoque: 400 };
+
+	function retornaInventario () {
+		console.log(this.nome);
+	}
+	produto1.info = retornaInventario;
+	produto1.info();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

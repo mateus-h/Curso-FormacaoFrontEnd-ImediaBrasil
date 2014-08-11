@@ -1,0 +1,58 @@
+@charset "ISO-8859-2";
+/* CSS Document */
+
+body {
+	width:320px;
+}
+
+header {
+	background-image:url(imagens/topo_mobile_320.jpg);
+	background-repeat:no-repeat;
+	width:320px;
+	height:86px;
+}
+
+article {
+	width:80%;
+}
+
+article img {
+	margin-bottom:20px;
+}
+
+aside {
+	display:none;
+}
+
+
+/* esconder menu do desktop */
+nav#menu_desktop {
+	display:none;
+}
+
+/* mostrar menu do mobile */
+nav#menu_mobile {
+	display:block;
+	float:left;
+	width:280px;	
+	margin:20px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+nav#menu_mobile ul {
+	margin:0;padding:0;
+}
+
+nav#menu_mobile li {
+	list-style:none;
+}
+
+nav#menu_mobile li  a {
+	display:block;
+	background-color:rgb(79,22,23);
+	padding:10px 5px;
+	text-decoration:none;
+	color:rgb(255,255,255);
+	margin-bottom:1px;
+}

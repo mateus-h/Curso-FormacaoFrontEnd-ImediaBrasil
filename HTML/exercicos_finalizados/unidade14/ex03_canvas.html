@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso HTML5 Essencial</title>
+        
+        <style>
+			#minhaTela{
+				width: 440px;
+				height: 280px;
+				border: solid 2px #999999;
+			}
+        </style>
+        <script>
+        	function desenhar () {
+			  var canvas = document.getElementById('minhaTela');
+			  
+			  if (canvas.getContext) {
+			  	var retangulo = canvas.getContext('2d');
+			  	
+			  	retangulo.fillStyle = "#000";
+			  	retangulo.fillRect(20,20,150,250);
+			  }
+			} 	
+			
+			window.onload = desenhar;
+        </script>	
+    </head>
+    
+    <body>
+		<canvas id="minhaTela">
+			
+		</canvas>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+@charset "ISO-8859-2";
+/* CSS Document */
+
+body {
+	width:90%;
+}
+
+article {
+	width:90%;
+}
+
+aside {
+	float:left;
+	width:90%;	
+}
+
+aside img:nth-child(1) {
+	float:left;
+}
+
+aside img:nth-child(2) {
+	float:right;
+}
+

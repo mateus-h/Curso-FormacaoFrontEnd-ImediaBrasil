@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2" />
+<title>Formulario</title>
+<style type="text/css">
+
+body {
+	background-color: #EEEEEE;
+	margin:0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#principal {
+	width:900px;
+	margin:0 auto;
+	background-color:#FFFFFF;
+	border-right:1px solid #999;
+	border-left:1px solid #999;
+	border-bottom:1px solid #999;
+	margin-bottom:30px;
+}
+
+#janela {
+	width:870px;
+	padding:15px;	
+}
+
+#mensagem {
+	width:500px;
+	margin-left:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#F00;	
+}
+
+h1 {
+	color:#666666;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+}
+
+.labelTexto {
+	display:block;
+}
+
+.labelCheckBox {
+	margin-right:20px;
+}
+
+.caixaTexto {
+	padding:5px;
+	border:1px solid #999;
+	width:200px;
+	background-color:#FFFFFF;
+	margin-bottom:20px;
+}
+
+.botaoSubmit {
+	display:block;	
+}
+
+#cidade {
+	display:block;
+	width:260px;
+	margin-bottom:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+	<div id="principal">
+    	<img src="imagem_topo.jpg" width="900" height="366" />
+        
+        <div id="janela">
+            <h1>Inscreva-se abaixo</h1>
+    
+            <form id="formViagem" name="formViagem" method="post" action="destino.html">
+
+				<label for="nome" class="labelTexto">Nome do Passageiro</label>
+    			<input type="text" id="nome" name="nome" class="caixaTexto"  />
+                
+				<label for="telefone" class="labelTexto">Telefone</label>
+    			<input type="text" id="telefone" name="telefone" class="caixaTexto" />
+                
+				<label for="email" class="labelTexto">Email</label>
+    			<input type="text" id="email" name="email"  class="caixaTexto" />    
+                
+                <span style="display:block;margin-bottom:20px">
+                	<input type="checkbox" name="escolhercidade" id="escolhercidade" value="escolher" />
+                	<label for="escolhercidade" class="labelCheckBox">Escolher a cidade que deseja conhecer.</label>
+                </span>
+                
+                <div id="cidade">
+                
+                	<input type="checkbox" name="Frankfurt" id="Frankfurt" value="1" />
+                    <label for="Frankfurt" class="labelCheckBox">Frankfurt</label>
+                    
+                	<input type="checkbox" name="Berlin" id="Berlin" value="2" />
+                    <label for="Berlin" class="labelCheckBox">Berlin</label>
+                    
+                	<input type="checkbox" name="Munique" id="Munique" value="3" />
+                    <label for="Munique" class="labelCheckBox">Munique</label>  
+                    
+                	<input type="checkbox" name="Colonia" id="Colonia" value="4" />
+                    <label for="Colonia" class="labelCheckBox">Colonia</label>     
+                    
+                	<input type="checkbox" name="Fussen" id="Fussen" value="5" />
+                    <label for="Fussen" class="labelCheckBox">Fussen</label>  
+                    
+                	<input type="checkbox" name="Stuttgart" id="Stuttgart" value="6" />
+                    <label for="Stuttgart">Stuttgart</label>                                                                                
+                
+                </div>                          
+    			
+                <input type="submit" value="Enviar" class="botaoSubmit" />
+    
+            </form>
+            
+        </div>
+
+    </div>
+ 
+ 	<script src="script2.js" type="text/javascript"></script>    
+</body>
+</html>

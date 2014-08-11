@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso HTML5 Essencial</title>
+        
+        <style>
+			#minhaTela {
+				background:url(imagens/background_grafico.png) no-repeat;
+			}
+		</style>
+        
+        <script>
+			function desenhar() {
+				var canvas=document.getElementById("minhaTela");
+				if ( canvas.getContext ) {
+					var linha = canvas.getContext('2d');
+					linha.lineWidth = 4;
+					linha.strokeStyle = "#f00";
+					linha.moveTo(44,200);
+					linha.lineTo(170,100);
+					linha.lineTo(240,150);
+					linha.lineTo(310,120);
+					linha.lineTo(380,90);
+					linha.lineTo(450,80);
+					linha.stroke();
+				}
+			}
+			
+			window.onload = desenhar;
+		</script>
+        
+    </head>
+    
+    <body>
+	
+		<canvas id="minhaTela" width="490" height="370">
+        
+        </canvas>
+    
+	</body>
+</html>

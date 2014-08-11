@@ -1,0 +1,25 @@
+@charset "ISO-8859-2";
+/* CSS Document */
+
+body {
+	width:320px;
+}
+
+header {
+	background-image:url(imagens/topo_mobile_320.jpg);
+	background-repeat:no-repeat;
+	width:320px;
+	height:86px;	
+}
+
+article {
+	width:80%;
+}
+
+article img {
+	margin-bottom:20px;
+}
+
+aside {
+	display:none;
+}
