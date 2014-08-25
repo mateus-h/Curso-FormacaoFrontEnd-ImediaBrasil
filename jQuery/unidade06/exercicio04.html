@@ -7,9 +7,13 @@
         <script src="jquery-1.10.1.min.js"></script>
         <script>
 			$( function(e) {
-				$('textarea').keypress(function(){$('body').append('keypress<br>');});
-				$('textarea').keydown(function(){$('body').append('keydown<br>');});	
-				$('textarea').keyup(function(){$('body').append('keyup<br>');})							
+				$('textarea').keypress(function(evt){
+                    $('body').append('você clicou na tecla'+evt.which;
+                });
+                $("textarea").keydown(function (evt) {
+                    $("body").append("você clicou na tecla "+evt.keyCode+" <br>");
+                })
+									
 			});
 
 	 	</script>           
