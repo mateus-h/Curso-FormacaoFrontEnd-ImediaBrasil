@@ -13,18 +13,23 @@
 				$('#mostrar').click( mostrarObjeto )
 				$('#esconder').click( esconderObjeto )
 				$('#reverso').click( reversoObjeto )
+				$('#opacidade').click( fade05 )
 			})
 			
 			function esconderObjeto() {
-				
+				$("#janela").fadeOut(200);
 			}
 
 			function mostrarObjeto() {
-				
+				$("#janela").fadeIn(400)
 			}								
 			
 			function reversoObjeto() {
-				
+				$("#janela").fadeToggle(600);
+			}
+			
+			function fade05 () {
+				$("#janela").fadeTo(200, 0.5);
 			}											
 
 		</script>        
@@ -34,6 +39,7 @@
         <input type="button" id="mostrar" 		value="Fade in" />
         <input type="button" id="esconder" 		value="Fade out" />
         <input type="button" id="reverso" 		value="Fade in/out" />
+        <input type="button" id="opacidade" 	value="Fade 0.5" />
         
         <div id="janela"></div>
     </body>

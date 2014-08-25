@@ -16,15 +16,18 @@
 			})
 			
 			function esconderObjeto() {
-			
+				$("#janela").hide("fast");
 			}
 
 			function mostrarObjeto() {
-				
+				$("#janela").show("slow", anicaoFinalizada);
 			}
 
 			function reverterObjeto() {
-			
+				$("#janela").toggle(400);
+			}
+			function anicaoFinalizada () {
+				alert("Animação Finalizou");
 			}
 		</script>        
     </head>
