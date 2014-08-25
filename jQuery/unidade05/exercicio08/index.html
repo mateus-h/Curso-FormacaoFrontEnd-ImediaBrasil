@@ -56,7 +56,20 @@
         <script src="js/jquery-1.10.1.min.js"></script>
         <script>
 			$(function() {
-	
+	           $("#seta_up").hide();
+               $(window).scroll(function  () {
+                   if ( $(this).scrollTop() > 150){
+                    $("#seta_up").fadeIn(300);
+                   }
+
+                   if ( $(this).scrollTop() < 150){
+                    $("#seta_up").fadeOut(300);
+                   }
+
+                   $("#seta_up").click(function  () {
+                       $("html,body").animate({scrollTop:0}, 1000);
+                   })
+               })
 			});	
 		</script>      
     
