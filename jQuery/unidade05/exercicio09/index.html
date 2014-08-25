@@ -60,10 +60,12 @@
 				
 				$(window).scroll(function(e) {
                     if($(this).scrollTop() > 150) {
-						$('#seta_up').fadeIn(300)	
+						$('#seta_up').fadeIn(300);
+                        $('nav').css("position","fixed").css("top",0);
 					}
 					if($(this).scrollTop() < 150 ) {
-						$('#seta_up').fadeOut(300);	
+						$('#seta_up').fadeOut(300);
+                        $("nav").css("position","static");	
 					}
                 });
 				
