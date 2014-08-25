@@ -28,15 +28,23 @@
 			nav li:nth-child(2) { background-image:url(imagem/basquete.png) } 
 			nav li:last-child 	{ background-image:url(imagem/tenis.png) } 
 		
-			#primeira 	{ width:300px; height:600px; background-color:#066 }
-			#segunda 	{ width:300px; height:600px; background-color:#933 }
-			#terceira 	{ width:300px; height:600px; background-color:#F93 }
+			#primeira 	{ width:100%; height:600px; background-color:#066 }
+			#segunda 	{ width:100%; height:600px; background-color:#933 }
+			#terceira 	{ width:100%; height:600px; background-color:#F93 }
 			
         </style>
          
         <script src="jquery-1.10.1.min.js"></script>
         <script>		
 			$( function(e) { 	
+				
+				function redimensionar () {
+					var alturadocumento = $(window).height();
+					$('#primeira').css('height', alturadocumento);
+					$('#segunda').css('height', alturadocumento);
+					$('#terceira').css('height', alturadocumento);
+				}
+				
 
 				// eventos
 				$('nav li:nth-child(1)').click(function() {
@@ -51,7 +59,14 @@
 					$("html, body").animate({scrollTop: $('#terceira').offset().top }, 1000);				
 				});
 
-			});			
+				$(window).resize(function  () {
+					redimensionar();
+				})
+				// chamadas iniciais
+				redimensionar();
+
+			});
+						
 		</script>   
     </head>
     <body>
