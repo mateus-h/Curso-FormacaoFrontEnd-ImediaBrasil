@@ -6,7 +6,21 @@
         
         <script src="jquery-1.10.1.min.js"></script>
         <script>
-					
+				$(function  () {
+                   // funçoes
+                    function mostrarMensagem () {
+                        alert("clicou no botão css");
+                    }
+
+                    $("#cursohtml").click(function  () {
+                        alert("clicou no  botão html 5");
+                        $("#cursocss").unbind("click", mostrarMensagem);
+                    });
+
+                   
+
+                    $("#cursocss").bind("click", mostrarMensagem);
+                });	
 		</script>        
     </head>
 
