@@ -35,7 +35,13 @@
         <script src="jquery-1.10.1.min.js"></script>
         <script>
 			$( function() {
-				
+				$(".dica + span").css({display: "none"});
+				$(".dica").focus(function () {
+					$(this).next().fadeIn(1000);
+				});
+				$(".dica").blur(function () {
+					$(this).next().fadeOut(500);
+				});
 				
 			});
 		</script>

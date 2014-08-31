@@ -45,7 +45,19 @@
         <script src="jquery-1.10.1.min.js"></script>
         <script>
 			$( function() {
-	
+				$(".principal").click(function () {
+				
+					if( $(this).is(":checked") ){
+
+						$(".opcoes").prop("checked","checked");
+
+					}else{
+
+						$(".opcoes").removeAttr("checked");
+						
+					}
+				});
+				
 			});
 		</script>
     </head>
@@ -62,5 +74,6 @@
                 <label><input type="checkbox" class="opcoes">Ronney</label>
             </section>	
         </form>
+        <p></p>
     </body>
 </html>

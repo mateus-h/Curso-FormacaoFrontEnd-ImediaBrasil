@@ -47,8 +47,17 @@
         <script src="jquery-1.10.1.min.js"></script>
         <script>
 			$( function() {
-			
-	
+				$("section.esportes input:checkbox").attr("disabled","disabled");
+				$("section input:radio").click(function () {
+					$("section input:checkbox").removeAttr("checked").removeAttr("disabled");
+
+					$(this).parents(".esportes").css("background-color","#ddd");
+					
+					$(this).parents(".esportes").siblings('.esportes').css("background-color","#fff");
+					
+					$(this).parents(".esportes").siblings('.esportes').find(":checkbox").attr("disabled","disabled ");
+				})	
+
 			
 			});
 		</script>
