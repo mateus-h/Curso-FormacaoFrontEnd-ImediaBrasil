@@ -20,17 +20,28 @@
         <script src="jquery-1.10.1.min.js"></script>
         <script>
 			$( function() {
-				
+				$("<div id='legenda'></div>").insertBefore("ul.albumimedia");
+                $("<div id='fotoprincipal'></div>").insertBefore("#legenda");
+                $("#fotoprincipal").prepend("<img/>");
+                $("#fotoprincipal img").attr("src", $("#galeriaimedia a").attr("href"));
+
+                function abrirFoto (e) {
+                    e.preventDefault();
+                    $("#fotoprincipal img").attr('src', $(this).parent().attr('href'));
+                    $("#legenda").text($(this).attr('title'));
+                }
+
+                $(".thumb").bind('click',abrirFoto);
 	
-			})	
+			});	
 		</script>
     </head>
 
     <body> 
 		<div id="galeriaimedia">    
             <ul class="albumimedia">
-                <li><a href="imagem/foto02.jpg"><img class="thumb" src="thumb/foto02_peq.jpg" width="50" height="31" title="Foto2"></a></li>
                 <li><a href="imagem/foto01.jpg"><img class="thumb" src="thumb/foto01_peq.jpg" width="50" height="31" title="Foto1"></a></li>
+                <li><a href="imagem/foto02.jpg"><img class="thumb" src="thumb/foto02_peq.jpg" width="50" height="31" title="Foto2"></a></li>
                 <li><a href="imagem/foto03.jpg"><img class="thumb" src="thumb/foto03_peq.jpg" width="50" height="31" title="Foto3"></a></li>
                 <li><a href="imagem/foto04.jpg"><img class="thumb" src="thumb/foto04_peq.jpg" width="50" height="31" title="Foto4"></a></li>
                 <li><a href="imagem/foto05.jpg"><img class="thumb" src="thumb/foto05_peq.jpg" width="50" height="31" title="Foto5"></a></li>
