@@ -8,7 +8,14 @@
 	<script src="js/jquery-ui-1.10.3.custom.js"></script>
 	<script>
 	$(function() {
-	
+		$("#datainicial").datepicker({
+			monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+			dayNamesMin:['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+			dateFormat: 'dd/mm/yy',
+			prevText: 'Anterior',
+			nextText: 'Proximo'
+
+		});
 		
 		// Hover states on the static widgets
 		$( "#dialog-link, #icons li" ).hover(

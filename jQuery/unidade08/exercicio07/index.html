@@ -11,12 +11,16 @@
 
 			$('#slider').slider({ 
 				value:100,
+				min: 0,
+				max: 200,
+				range: true,
+				values: [50,150],
 				slide: function(event,ui) {
-					$("#amount").val("R$ " + ui.value);	
+					$("#amount").val("R$ " + ui.values[0]+ " --- R$ "+ ui.values[1]);	
 				}
 			});
 			
-			$('#amount').val("R$" + $('#slider').slider("value"));
+			$('#amount').val("R$" + $('#slider').slider("values",0)+ " --- R$ "+ $("#slider").slider("values",1));
 					            
         });
         </script>
