@@ -1,6 +1,7 @@
 <?php
 		// conexao com banco
 		$con = mysql_connect('localhost','root','');
+		mysql_query("SET NAMES 'utf8'");
 		mysql_select_db('imediaburguer');
 		
 		// pegar campos recebidos remotamente

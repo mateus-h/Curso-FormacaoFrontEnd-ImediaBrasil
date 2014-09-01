@@ -11,7 +11,32 @@
         <script src="js/jquery.js"></script>
         <script>
 			$( function() {
-				
+				$("#categorias").change(function (e){
+                    var formulario = $(this);
+                    // console.log(formulario.serialize())
+                    $.ajax({
+                        type: "GET",
+                        data: formulario.serialize(),
+                        url: "pesquisar_produtos.php",
+                        cache: false
+                    }).then(sucesso, falha);
+
+                    function sucesso (dados) {
+                        // console.log($.parseJSON(dados));
+                        var saida = "<ul>";
+                        $.each($.parseJSON(dados), function (i,valor) {
+                            saida += "<li>" + valor.nomeproduto +"</li>";
+                        });
+
+                        saida += "</ul>";
+                        $("#janela").html(saida);
+                    }
+
+                    
+                    function falha () {
+                        console.log("Erro");
+                    }
+                });
 			});
 		</script>
 

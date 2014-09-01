@@ -29,6 +29,9 @@
 						console.log($.parseJSON(resposta))	
 						saida = '';
 						$.each($.parseJSON(resposta), function(i,valor) {
+                            saida += '<option value="'+valor.nomeprodutoid+ '">';
+                            saida += valor.nomeproduto;
+                            saida += '</option>';
 	
 						})
 					

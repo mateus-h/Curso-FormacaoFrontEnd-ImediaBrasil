@@ -6,7 +6,26 @@
        
         <script src="js/jquery.js"></script>
         <script>
+            $.ajax({
+                url: "nome.php",cache: false
 
+            // }).done(function (msg) {
+            //     $("#janela").html(msg);
+            // }).fail(function (msg){
+            //     $("#janela").html("Erro no servidor");
+            // })
+
+            }).then(sucesso, erro);
+
+            function sucesso (msg) {
+                // document.getElementById("janela").innerHTML = msg;
+                $("#janela").html(msg);
+            }
+
+            function erro () {
+                // document.getElementById('janela').innerHTML = "Erro no servidor";
+                $("#janela").html("Erro no servidor");
+            }
 		</script>
 
     </head>

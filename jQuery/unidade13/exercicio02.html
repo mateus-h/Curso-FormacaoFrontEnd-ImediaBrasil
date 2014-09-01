@@ -6,12 +6,16 @@
         
         <script src="js/jquery.js"></script>
         <script>
-	
+	       $(function () {
+                $.getJSON('http://www.imediabrasil.com.br/cursojquery/unidade13/listar_produtos.php', function(data){
+                    console.log(data);
+                });
+           })
 		
 		</script>
 		
     </head>
-
+        
     <body>
         
     </body>

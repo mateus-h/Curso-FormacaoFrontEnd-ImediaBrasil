@@ -15,25 +15,19 @@
 				
 				var retornarProdutos;
 				function preencherLista() {
-					$.ajax({
-						url:"pesquisar_produtos.php",
-						cache:false,
-						async:true
-					})
-					.done(function(resposta) {
+					$.getJSON("pesquisar_produtos.php", function (resposta) {
+						console.log(resposta);			
 						retornarProdutos = resposta;
 						var saida = '';
-						$.each($.parseJSON(resposta), function(i,valor) {
+						$.each(resposta, function(i,valor) {
 							saida += '<option value="' + valor.produtoid + '">';
 							saida += valor.nomeproduto;
 							saida += '</option>'
 						})
 						$('#sanduiches').html(saida)
 					})
-					.fail( function() {
-						$('#janela').html('erro')
-					});					
-					
+				
+
 				}
 				
 				preencherLista();
@@ -43,7 +37,7 @@
   					var cat = $('#categorias').val();
 					$('#sanduiches option').remove();
 					var saida='';
-					$.each($.parseJSON(retornarProdutos), function(i,valor) {
+					$.each(retornarProdutos, function(i,valor) {
 						if ( cat == valor.categoriaid || cat == 0) {
 							saida += '<option value="' + valor.produtoid + '">';
 							saida += valor.nomeproduto;

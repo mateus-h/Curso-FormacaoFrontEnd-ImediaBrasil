@@ -12,34 +12,42 @@
         <script src="js/jquery.js"></script>
         <script>
 			$( function() {
-				
-				$('#categorias').change(function(e) {
-  
-					e.preventDefault();
-					var formulario = $(this);
+				 var retornarProdutos;
+				function preencherLista(){
 										
 					$.ajax({
-						type:"get",
-						data:formulario.serialize(),
 						url:"pesquisar_produtos.php",
 						cache:false,
 						async:true
 					})
 					.done(function(resposta) {
-						console.log($.parseJSON(resposta))	
+						retornarProdutos = resposta;
 						saida = '';
-						$.each($.parseJSON(resposta), function(i,valor) {
+						$('#sanduiches').html(saida);
+					})
+					.fail( function() {
+						$('#janela').html('erro');
+					});
+				}
+
+				preencherLista();
+
+
+				$('#categorias').change(function(e) {
+  					var cat = $("#categorias").val();
+					$("#sanduiches option").remove();
+					var saida = '';
+
+					$.each($.parseJSON(retornarProdutos), function(i,valor) {
+						if(cat == valor.categoriaid || cat == 0){	
 							saida += '<option value="' + valor.produtoid + '">';
 							saida += valor.nomeproduto;
 							saida += '</option>'
-						})
-					
-						$('#sanduiches').html(saida)
-					})
-					.fail( function() {
-						$('#janela').html('erro')
+						}
 					});
+
 				});
+		
 			});
 		</script>
 
@@ -51,6 +59,7 @@
         	<form action="pesquisar_produtos.cfm" method="get" id="refeicao">
         		<label>Categorias<br>
         			<select name="categoria" id="categorias">
+        			  <option value="0">Todas as Categorias</option>
         			  <option value="1">Almocos</option>
         			  <option value="2">Sanduiches</option>
         			  <option value="3">Petiscos</option>

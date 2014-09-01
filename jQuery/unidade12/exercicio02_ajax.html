@@ -12,10 +12,27 @@
 		
         <script src="js/jquery.js"></script>
         <script>
-			$( function() {
-				
-	
-			});
+			$(function  () {
+                $("#inserirComentario").submit(function(e){
+                    e.preventDefault();
+                    var formulario = $(this);
+                    var retorno = enviarFormulariio(formulario);
+                    $("#janela").html(retorno);
+                });
+
+                function enviarFormulariio(dados){
+                    meuRetorno = "";
+                    $.ajax({
+                        type: dados.attr("method"),
+                        data: dados.serialize(),
+                        url: dados.attr("action"),
+                        async: false
+                    }).always(function(mensagem) {
+                        meuRetorno = mensagem;
+                    });
+                    return meuRetorno;
+                }
+            });
 		</script>
 
     </head>
